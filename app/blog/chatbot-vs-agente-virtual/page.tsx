@@ -75,9 +75,6 @@ export default function ArticlePage() {
               src="/images/blog/chatbot-vs-agente-virtual.png"
               alt="Comparación entre chatbot básico y agente virtual inteligente"
               className="w-full h-48 sm:h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
-              onError={(e) => {
-                e.currentTarget.src = "/placeholder.svg?height=400&width=800&text=Chatbot+vs+Agente+Virtual"
-              }}
             />
           </div>
 

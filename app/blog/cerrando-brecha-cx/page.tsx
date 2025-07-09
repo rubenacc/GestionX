@@ -75,10 +75,6 @@ export default function ArticlePage() {
               src="/images/blog/cerrando-brecha-cx.png"
               alt="Cliente frustrado con expectativas vs realidad en servicio al cliente"
               className="w-full h-48 sm:h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
-              onError={(e) => {
-                e.currentTarget.src =
-                  "/placeholder.svg?height=400&width=800&text=Cliente+Frustrado+Expectativas+vs+Realidad"
-              }}
             />
           </div>
 

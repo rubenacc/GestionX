@@ -115,13 +115,11 @@ export default function BlogPage() {
               >
                 <div className="relative">
                   <img
-                    src={post.image || "/placeholder.svg"}
+                    src={
+                      post.image || "/placeholder.svg?height=200&width=400&text=" + encodeURIComponent(post.category)
+                    }
                     alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      e.currentTarget.src =
-                        "/placeholder.svg?height=200&width=400&text=" + encodeURIComponent(post.category)
-                    }}
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium">

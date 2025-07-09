@@ -75,9 +75,6 @@ export default function ArticlePage() {
               src="/images/blog/ecuacion-costo-calidad-servicio.png"
               alt="Balance entre costo, calidad y servicio 24/7"
               className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
-              onError={(e) => {
-                e.currentTarget.src = "/placeholder.svg?height=400&width=800&text=Costo+Calidad+Servicio"
-              }}
             />
           </div>
 
