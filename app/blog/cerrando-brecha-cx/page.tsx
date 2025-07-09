@@ -46,27 +46,27 @@ export default function ArticlePage() {
               <span>Experiencia del Cliente</span>
             </div>
 
-            <AnimatedSectionTitle className="text-4xl md:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
               Cerrando la Brecha CX: ¿Por Qué Sus Clientes No Están Satisfechos?
             </AnimatedSectionTitle>
 
-            <div className="flex items-center justify-between text-gray-600 mb-8 flex-wrap gap-4">
-              <div className="flex items-center space-x-6">
+            <div className="flex items-center justify-between text-gray-600 mb-8 flex-wrap gap-2 sm:gap-4">
+              <div className="flex items-center space-x-3 sm:space-x-6 flex-wrap gap-2">
                 <div className="flex items-center space-x-2">
-                  <User className="w-4 h-4" />
-                  <span>Equipo GestionX</span>
+                  <User className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-sm sm:text-base">Equipo GestionX</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>18 Ene 2025</span>
+                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-sm sm:text-base">18 Ene 2025</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
-                  <span>8 min de lectura</span>
+                  <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-sm sm:text-base">8 min de lectura</span>
                 </div>
               </div>
-              <Button variant="outline" className="bg-white text-gray-700 border-gray-300">
-                <Share2 className="w-4 h-4 mr-2" />
+              <Button variant="outline" className="bg-white text-gray-700 border-gray-300 text-sm sm:text-base">
+                <Share2 className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 Compartir
               </Button>
             </div>
@@ -74,13 +74,17 @@ export default function ArticlePage() {
             <img
               src="/images/blog/cerrando-brecha-cx.png"
               alt="Cliente frustrado con expectativas vs realidad en servicio al cliente"
-              className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
+              className="w-full h-48 sm:h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
+              onError={(e) => {
+                e.currentTarget.src =
+                  "/placeholder.svg?height=400&width=800&text=Cliente+Frustrado+Expectativas+vs+Realidad"
+              }}
             />
           </div>
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
               Las expectativas de los clientes no paran de crecer, y esto representa un desafío constante para las
               organizaciones de Experiencia del Cliente (CX). El informe de Genesys "El estado de la experiencia del
               cliente" de 2025 revela una discrepancia significativa entre lo que los consumidores esperan y la realidad
@@ -90,32 +94,32 @@ export default function ArticlePage() {
               brecha?
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Lo que sus clientes valoran más en una interacción de servicio:
             </h2>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
               <strong>Resolución Rápida y a la Primera:</strong> La resolución del problema en la primera interacción
               (49%) y una respuesta rápida (48%) son, con diferencia, los factores más valorados por los consumidores a
               nivel mundial. La paciencia es limitada: solo el 13% afirmó haber esperado menos de cinco minutos para
               interactuar con un agente en el último año, y un 29% esperó 30 minutos o más.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
               <strong>Personalización y Empatía:</strong> Los clientes quieren sentirse escuchados y comprendidos. El
               72% considera que ser escuchado y comprendido es uno de los atributos más valiosos al interactuar con sus
               marcas favoritas. Además, el 56% desea que la empresa conozca su historial de cuenta. La falta de empatía
               puede llevar al 70% de los consumidores a optar por la competencia.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
               <strong>Servicio Fluido en Todos los Canales:</strong> La capacidad de cambiar de canal sin tener que
               repetir información es "sumamente importante" o "algo importante" para el 97% de los consumidores. Sin
               embargo, más de la mitad (50%) tuvo que repetir información a un segundo agente, y el 41% a un agente
               después de un chatbot. Esta repetición es frustrante y puede llevar a la insatisfacción.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
               <strong>Acceso a Personas cuando sea Necesario:</strong> A pesar del auge del autoservicio, más de la
               mitad de los consumidores (53%) prefiere consultar a un agente humano cuando es posible. La incapacidad de
               comunicarse con un agente en vivo es "muy frustrante" para el 37% de los consumidores, y puede llevarlos a
@@ -123,16 +127,16 @@ export default function ArticlePage() {
               el 40%.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">El Alto Costo del Mal Servicio:</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">El Alto Costo del Mal Servicio:</h2>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
               Las malas experiencias tienen repercusiones negativas. El 53% de los consumidores abandonaría una marca
               predilecta después de solo dos a cinco interacciones negativas. Además, casi un tercio (30%) de los
               consumidores dejó de consumir una marca en el último año debido a una mala experiencia de atención al
               cliente. La reputación de su marca está directamente ligada a la calidad de su servicio.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
               Mientras los directivos de CX priorizan la satisfacción del cliente, existe una marcada diferencia con las
               prioridades del consumidor, especialmente en la resolución a la primera interacción (los directivos la
               valoran novena, los consumidores primera) y la importancia de un agente capacitado (directivos undécimo,
@@ -145,7 +149,7 @@ export default function ArticlePage() {
               className="w-full h-48 md:h-64 object-cover rounded-3xl shadow-lg mb-8"
             />
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
               En [Nombre de su Compañía BPO], entendemos estos desafíos y la urgente necesidad de alinear la estrategia
               de CX con las expectativas de sus clientes. Nos especializamos en ayudar a las organizaciones a ofrecer
               interacciones rápidas, empáticas y fluidas, asegurando que cada punto de contacto con el cliente

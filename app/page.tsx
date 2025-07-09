@@ -38,9 +38,6 @@ export default function LandingPage() {
               Inicio
             </a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Nuestros Programas
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Servicios
             </a>
             <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
@@ -107,7 +104,7 @@ export default function LandingPage() {
         <FloatingShapes />
 
         <ParallaxContainer speed={0.3} className="max-w-5xl mx-auto text-center relative z-20">
-          <h1 className="text-5xl md:text-7xl font-bold font-outfit mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-outfit mb-8 leading-tight">
             Transforma la{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
               Experiencia
@@ -117,16 +114,16 @@ export default function LandingPage() {
           </h1>
 
           <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light mb-6">
-              GX orquesta, integra y gestiona, agentes virtuales y personas, a través de procesos y tecnología, para
-              crear experiencias memorables y empáticas.
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed font-light mb-6">
+              GestiónX orquesta, integra y gestiona, agentes virtuales y personas, a través de procesos y tecnología,
+              para crear experiencias memorables y empáticas.
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-3xl inline-block font-semibold text-lg mb-12 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 max-w-4xl">
-            <div className="flex items-center justify-center space-x-3 flex-wrap">
-              <Zap className="w-6 h-6 flex-shrink-0" />
-              <span className="text-center">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 sm:px-8 py-4 rounded-3xl inline-block font-semibold text-base sm:text-lg mb-12 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 max-w-4xl mx-4 sm:mx-auto">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3 flex-wrap">
+              <Zap className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+              <span className="text-center text-sm sm:text-base">
                 Ofrecemos a tus clientes un servicio rápido y de primera clase, 24/7 y con respuestas inmediatas. Agenda
                 tu Consultoría Estratégica de CX
               </span>
@@ -155,7 +152,7 @@ export default function LandingPage() {
               <Shield className="w-5 h-5" />
               <span>Socio Estratégico Confiable</span>
             </div>
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
               Somos tu{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 socio estratégico
@@ -163,7 +160,7 @@ export default function LandingPage() {
               en experiencia del cliente
             </AnimatedSectionTitle>
             <div className="max-w-3xl mx-auto space-y-6">
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Descubre por qué las PYMES y startups en Paraguay nos eligen para potenciar su crecimiento.
               </p>
             </div>
@@ -257,14 +254,14 @@ export default function LandingPage() {
               <Target className="w-5 h-5" />
               <span>Servicios Especializados</span>
             </div>
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
               Nuestros servicios de{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 experiencia del cliente
               </span>
             </AnimatedSectionTitle>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Soluciones integrales para fidelizar a tus clientes y potenciar tu negocio.
               </p>
             </div>
@@ -305,15 +302,15 @@ export default function LandingPage() {
                 key={index}
                 className={`group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br ${service.bgColor} overflow-hidden rounded-3xl`}
               >
-                <CardContent className="p-10">
+                <CardContent className="p-6 sm:p-10">
                   <div className="flex items-start space-x-6">
                     <div
-                      className={`flex-shrink-0 p-4 bg-gradient-to-br ${service.color} rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                      className={`flex-shrink-0 p-3 sm:p-4 bg-gradient-to-br ${service.color} rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
                     >
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold font-outfit mb-6 text-gray-900">{service.title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold font-outfit mb-6 text-gray-900">{service.title}</h3>
                       <p className="text-gray-700 leading-relaxed text-lg mb-8">{service.description}</p>
                       <div className="space-y-4">
                         {service.features.map((feature, featureIndex) => (
@@ -332,12 +329,12 @@ export default function LandingPage() {
 
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Listo para transformar tu CX?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Listo para diferenciarte gestionando tus interacciones como las mejores empresas?</h3>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Nuestro equipo de expertos está preparado para diseñar la solución perfecta para tu empresa.
               </p>
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-8 py-4 font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Solicitar Consultoría Gratuita
+                Conocé más... 
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
@@ -349,7 +346,7 @@ export default function LandingPage() {
       <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
         <ParallaxContainer speed={0.1} className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900">
               ¿Qué más podemos{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 hacer por ti?
@@ -433,14 +430,14 @@ export default function LandingPage() {
               <Sparkles className="w-5 h-5" />
               <span>Consultoría de Vanguardia</span>
             </div>
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
               Consultoría CX y EX de{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 vanguardia
               </span>
             </AnimatedSectionTitle>
             <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Somos Business Partners exclusivos de{" "}
                 <a
                   href="https://izo.es"
@@ -556,14 +553,14 @@ export default function LandingPage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 font-semibold">
               <Sparkles className="w-5 h-5 text-yellow-300" />
-              <span>Consultoría Gratuita</span>
+              <span>{"Consultoria en Gestión de Experiencias"}</span>
             </div>
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-white">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-white">
               Inicia tu transformación en <span className="text-yellow-300">experiencia del cliente.</span>
             </AnimatedSectionTitle>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Completa el formulario y uno de nuestros especialistas en CX se pondrá en contacto para una consultoría
-              gratuita y sin compromiso.
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              Completa el formulario y uno de nuestros especialistas en XM se pondrá en contacto. Agenda una consultoría
+              y sin compromiso.
             </p>
           </div>
 
@@ -572,20 +569,25 @@ export default function LandingPage() {
               <form className="space-y-6">
                 <Input
                   placeholder="Nombre y Apellido"
-                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-14 text-lg"
+                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12 sm:h-14 text-base sm:text-lg"
                 />
                 <Input
                   type="email"
                   placeholder="Email"
-                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-14 text-lg"
+                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12 sm:h-14 text-base sm:text-lg"
+                />
+                <Input
+                  type="tel"
+                  placeholder="Número de Teléfono"
+                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12 sm:h-14 text-base sm:text-lg"
                 />
                 <Input
                   placeholder="Empresa"
-                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-14 text-lg"
+                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12 sm:h-14 text-base sm:text-lg"
                 />
                 <Input
                   placeholder="Cargo (Opcional)"
-                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-14 text-lg"
+                  className="rounded-2xl border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12 sm:h-14 text-base sm:text-lg"
                 />
                 <Textarea
                   placeholder="¿Cuál problema necesitas resolver?"
@@ -595,14 +597,14 @@ export default function LandingPage() {
                   <div className="flex items-start space-x-2">
                     <Shield className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                     <span>
-                      Al hacer clic en "Agendar Consultoría Gratuita", aceptas nuestros Términos de Servicio y Política
-                      de Privacidad.
+                      Al hacer clic en "Agendar Contact", aceptas nuestros Términos de Servicio y Política de
+                      Privacidad.
                     </span>
                   </div>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   <Calendar className="w-5 h-5 mr-2" />
-                  Agendar Consultoría Gratuita
+                  Agendar Contacto
                 </Button>
               </form>
             </CardContent>
@@ -649,7 +651,7 @@ export default function LandingPage() {
             <div>
               <h4 className="text-xl font-bold font-outfit mb-6">Enlaces Rápidos</h4>
               <ul className="space-y-3 text-gray-400">
-                {["Inicio", "Nuestros Programas", "Servicios", "Blog", "Contacto"].map((item, index) => (
+                {["Inicio", "Servicios", "Blog", "Contacto"].map((item, index) => (
                   <li key={index}>
                     <a href="#" className="hover:text-white transition-colors flex items-center space-x-2">
                       <ArrowRight className="w-4 h-4" />

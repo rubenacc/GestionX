@@ -75,9 +75,6 @@ export default function BlogPage() {
               Inicio
             </a>
             <a href="/#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Nuestros Programas
-            </a>
-            <a href="/#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Servicios
             </a>
             <a href="/blog" className="text-blue-600 font-medium">
@@ -101,16 +98,16 @@ export default function BlogPage() {
               <BookOpen className="w-5 h-5" />
               <span>Contenido Especializado</span>
             </div>
-            <AnimatedSectionTitle className="text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900">
+            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900">
               Nuestro{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">blog</span>
             </AnimatedSectionTitle>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Descubre insights, tendencias y mejores prácticas en experiencia del cliente y transformación digital.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((post, index) => (
               <Card
                 key={index}
@@ -121,6 +118,10 @@ export default function BlogPage() {
                     src={post.image || "/placeholder.svg"}
                     alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "/placeholder.svg?height=200&width=400&text=" + encodeURIComponent(post.category)
+                    }}
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -128,24 +129,24 @@ export default function BlogPage() {
                     </span>
                   </div>
                 </div>
-                <CardContent className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold font-outfit mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+                <CardContent className="p-4 sm:p-6 flex flex-col flex-1">
+                  <h3 className="text-lg sm:text-xl font-bold font-outfit mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500 mb-4 flex-wrap gap-2">
                     <div className="flex items-center space-x-2">
-                      <User className="w-4 h-4" />
-                      <span>{post.author}</span>
+                      <User className="w-3 h-3 sm:w-4 sm:h-4" />
+                      <span className="text-xs sm:text-sm">{post.author}</span>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2 sm:space-x-4">
                       <div className="flex items-center space-x-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">{post.date}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
+                        <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">{post.readTime}</span>
                       </div>
                     </div>
                   </div>

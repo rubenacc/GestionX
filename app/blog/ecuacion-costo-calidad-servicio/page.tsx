@@ -46,7 +46,7 @@ export default function ArticlePage() {
               <span>Estrategia Operacional</span>
             </div>
 
-            <AnimatedSectionTitle className="text-4xl md:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
               Cómo Resolver la Ecuación de Costo, Calidad y Servicio 24/7
             </AnimatedSectionTitle>
 
@@ -75,6 +75,9 @@ export default function ArticlePage() {
               src="/images/blog/ecuacion-costo-calidad-servicio.png"
               alt="Balance entre costo, calidad y servicio 24/7"
               className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg?height=400&width=800&text=Costo+Calidad+Servicio"
+              }}
             />
           </div>
 

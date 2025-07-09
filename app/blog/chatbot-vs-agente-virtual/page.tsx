@@ -46,12 +46,12 @@ export default function ArticlePage() {
               <span>Inteligencia Artificial</span>
             </div>
 
-            <AnimatedSectionTitle className="text-4xl md:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
               ¿Su Chatbot Frustra a sus Clientes? La Diferencia Real entre un "Bot" y un Agente Virtual Inteligente
             </AnimatedSectionTitle>
 
-            <div className="flex items-center justify-between text-gray-600 mb-8 flex-wrap gap-4">
-              <div className="flex items-center space-x-6">
+            <div className="flex items-center justify-between text-gray-600 mb-8 flex-wrap gap-2 sm:gap-4">
+              <div className="flex items-center space-x-3 sm:space-x-6 flex-wrap gap-2">
                 <div className="flex items-center space-x-2">
                   <User className="w-4 h-4" />
                   <span>Especialistas en IA</span>
@@ -74,13 +74,16 @@ export default function ArticlePage() {
             <img
               src="/images/blog/chatbot-vs-agente-virtual.png"
               alt="Comparación entre chatbot básico y agente virtual inteligente"
-              className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
+              className="w-full h-48 sm:h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg?height=400&width=800&text=Chatbot+vs+Agente+Virtual"
+              }}
             />
           </div>
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Todos hemos estado ahí. Atrapados en el bucle infinito de un chatbot que no entiende nada. Escribimos una
               pregunta clara y recibimos un "No he entendido tu consulta". Lo intentamos de nuevo, con palabras más
               simples, sólo para ser recibidos por una lista inútil de opciones que no tienen nada que ver con nuestro
@@ -110,7 +113,7 @@ export default function ArticlePage() {
               empezar a construir lealtad a escala.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Anatomía de un Mal Chatbot: Reconociendo la Frustración Digital
             </h2>
 
@@ -158,7 +161,7 @@ export default function ArticlePage() {
               Estos bots no son un activo. Son una barrera activa entre usted y su cliente.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               El ADN de un Agente Virtual Inteligente: De la Frustración a la Resolución
             </h2>
 
@@ -206,7 +209,7 @@ export default function ArticlePage() {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Más Allá de la Ineficiencia: El Verdadero Riesgo de una Mala IA para su Marca
             </h2>
 
@@ -246,7 +249,7 @@ export default function ArticlePage() {
               peligrosas en el mundo del CX. El costo real se paga en lealtad y reputación de marca.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               El Camino Inteligente: ¿Construir o Aliarse? Por Qué Externalizar es una Decisión Estratégica
             </h2>
 

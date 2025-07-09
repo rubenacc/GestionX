@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ParallaxContainer } from "@/components/parallax-container"
-import { AnimatedSectionTitle } from "@/components/animated-section-title"
-import { ArrowLeft, Calendar, Clock, User, Share2, Bot } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export default function ArticlePage() {
   return (
@@ -18,258 +16,176 @@ export default function ArticlePage() {
             <a href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Inicio
             </a>
-            <a href="/blog" className="text-blue-600 font-medium">
+            <a href="/#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              Servicios
+            </a>
+            <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Blog
             </a>
+            <a href="/#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              Contacto
+            </a>
+          </nav>
+          <div className="md:block">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Agenda una cita
             </Button>
-          </nav>
+          </div>
         </div>
       </header>
 
+      {/* Hero Section */}
+      <section className="bg-gray-50 py-20 mt-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Contact Center sin Agentes: Automatización Inteligente para tu Negocio
+          </h1>
+          <p className="text-lg text-gray-700 mb-8">
+            Descubre cómo un contact center sin agentes puede transformar la atención al cliente y optimizar tus
+            operaciones.
+          </p>
+          <img
+            src="/images/blog/contact-center-sin-agentes.png"
+            alt="Contact Center sin Agentes"
+            className="rounded-lg shadow-md mx-auto"
+          />
+        </div>
+      </section>
+
       {/* Article Content */}
-      <article className="py-24 px-4 mt-16">
-        <ParallaxContainer speed={0.1} className="max-w-4xl mx-auto">
-          {/* Back Button */}
-          <div className="mb-8">
-            <a href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Volver al Blog
-            </a>
-          </div>
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 leading-relaxed">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4">¿Qué es un Contact Center sin Agentes?</h2>
+          <p className="mb-4">
+            Un contact center sin agentes, también conocido como centro de contacto automatizado, utiliza tecnologías
+            como la inteligencia artificial (IA), el procesamiento del lenguaje natural (PLN) y el reconocimiento de voz
+            para gestionar las interacciones con los clientes sin la necesidad de agentes humanos en tiempo real.
+          </p>
 
-          {/* Article Header */}
-          <div className="mb-12">
-            <div className="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 rounded-full px-4 py-2 mb-6 font-medium">
-              <Bot className="w-4 h-4" />
-              <span>Transformación Digital</span>
+          <h2 className="text-3xl font-semibold text-gray-900 mt-8 mb-4">
+            Beneficios de un Contact Center sin Agentes
+          </h2>
+          <ul className="list-disc pl-5 mb-4">
+            <li>
+              <span className="font-semibold">Disponibilidad 24/7:</span> Atención al cliente ininterrumpida, sin
+              importar la hora o el día.
+            </li>
+            <li>
+              <span className="font-semibold">Reducción de Costos:</span> Disminución significativa de los gastos
+              operativos al reducir la necesidad de personal.
+            </li>
+            <li>
+              <span className="font-semibold">Escalabilidad:</span> Capacidad de manejar un gran volumen de
+              interacciones simultáneamente, adaptándose a las necesidades del negocio.
+            </li>
+            <li>
+              <span className="font-semibold">Eficiencia:</span> Resolución rápida de consultas comunes y derivación
+              eficiente a agentes humanos cuando es necesario.
+            </li>
+            <li>
+              <span className="font-semibold">Personalización:</span> Ofrece experiencias personalizadas a través del
+              análisis de datos y la segmentación de clientes.
+            </li>
+          </ul>
+
+          <h2 className="text-3xl font-semibold text-gray-900 mt-8 mb-4">Tecnologías Clave</h2>
+          <ul className="list-disc pl-5 mb-4">
+            <li>
+              <span className="font-semibold">Inteligencia Artificial (IA):</span> Permite la automatización de tareas y
+              la toma de decisiones inteligentes.
+            </li>
+            <li>
+              <span className="font-semibold">Procesamiento del Lenguaje Natural (PLN):</span> Facilita la comprensión y
+              generación de lenguaje humano para interacciones más naturales.
+            </li>
+            <li>
+              <span className="font-semibold">Reconocimiento de Voz:</span> Convierte el habla en texto para procesar
+              las solicitudes de los clientes.
+            </li>
+            <li>
+              <span className="font-semibold">Chatbots y Asistentes Virtuales:</span> Proporcionan respuestas
+              instantáneas y guían a los clientes a través de diferentes procesos.
+            </li>
+          </ul>
+
+          <h2 className="text-3xl font-semibold text-gray-900 mt-8 mb-4">Casos de Uso</h2>
+          <ul className="list-disc pl-5 mb-4">
+            <li>
+              <span className="font-semibold">Atención al Cliente:</span> Responder preguntas frecuentes, resolver
+              problemas básicos y proporcionar información sobre productos y servicios.
+            </li>
+            <li>
+              <span className="font-semibold">Ventas:</span> Guiar a los clientes a través del proceso de compra,
+              ofrecer recomendaciones personalizadas y procesar pedidos.
+            </li>
+            <li>
+              <span className="font-semibold">Soporte Técnico:</span> Diagnosticar problemas técnicos, proporcionar
+              soluciones paso a paso y programar citas con técnicos especializados.
+            </li>
+            <li>
+              <span className="font-semibold">Cobranza:</span> Enviar recordatorios de pago, negociar planes de pago y
+              procesar pagos.
+            </li>
+          </ul>
+
+          <h2 className="text-3xl font-semibold text-gray-900 mt-8 mb-4">
+            Implementación de un Contact Center sin Agentes
+          </h2>
+          <p className="mb-4">
+            La implementación de un contact center sin agentes requiere una planificación cuidadosa y la selección de
+            las tecnologías adecuadas. Es importante definir los objetivos del negocio, identificar los casos de uso más
+            relevantes y diseñar flujos de conversación claros y efectivos.
+          </p>
+
+          <h2 className="text-3xl font-semibold text-gray-900 mt-8 mb-4">Conclusión</h2>
+          <p className="mb-4">
+            Un contact center sin agentes ofrece una solución innovadora para mejorar la atención al cliente, reducir
+            costos y optimizar las operaciones. Al adoptar esta tecnología, las empresas pueden ofrecer experiencias
+            personalizadas y eficientes, impulsando la satisfacción del cliente y el crecimiento del negocio.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-500">© 2023 GestionX. Todos los derechos reservados.</p>
+        </div>
+        <div className="bg-gray-700 py-12">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+            <div className="text-white">
+              <img src="/images/gestionx-new-logo-white.png" alt="GestionX" className="h-8 w-auto mb-4" />
+              <p className="text-sm text-gray-300">
+                Ofrecemos soluciones de software innovadoras para optimizar la gestión de tu negocio.
+              </p>
             </div>
 
-            <AnimatedSectionTitle className="text-4xl md:text-5xl font-bold font-outfit mb-6 text-gray-900 leading-tight">
-              ¿Es posible tener un Contact Center sin agentes?
-            </AnimatedSectionTitle>
-
-            <div className="flex items-center justify-between text-gray-600 mb-8 flex-wrap gap-4">
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center space-x-2">
-                  <User className="w-4 h-4" />
-                  <span>Expertos en Automatización</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>10 Ene 2025</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
-                  <span>9 min de lectura</span>
-                </div>
-              </div>
-              <Button variant="outline" className="bg-white text-gray-700 border-gray-300">
-                <Share2 className="w-4 h-4 mr-2" />
-                Compartir
-              </Button>
+            <div className="text-white">
+              <h3 className="text-lg font-semibold mb-4">Links</h3>
+              <ul>
+                {["Inicio", "Servicios", "Blog", "Contacto"].map((item, index) => (
+                  <li key={index}>
+                    <a href="#" className="hover:text-white transition-colors flex items-center space-x-2">
+                      <ArrowRight className="w-4 h-4" />
+                      <span>{item}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <img
-              src="/images/blog/contact-center-sin-agentes.png"
-              alt="Contact center futurista con tecnología AI"
-              className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-lg mb-8"
-            />
-          </div>
-
-          {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Para los que no están familiarizados con los conceptos, un Contact Center es un centro de operaciones que
-              gestiona todas las interacciones de una empresa con sus clientes, ya sea entrantes o salientes, a través
-              de diversos canales como la voz, correo electrónico, chat, redes sociales, etc. Los BPO (Business Process
-              Outsourcing), por su parte, son empresas especializadas que ofrecen servicios de externalización de
-              procesos de negocio a otras compañías.
-            </p>
-
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Y sí, es posible tener un Contact Center o un BPO que funcione exclusivamente con agentes virtuales de IA,
-              aunque la implementación y la viabilidad total dependerán de la complejidad y la naturaleza de las
-              interacciones que maneje. Pero, ¿es lo ideal?, analicemos un poco el caso.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              A continuación detallo por qué es cada vez más una realidad y qué implicaciones tiene:
-            </p>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ventajas de un Contact Center BPO 100% basado en IA:
-            </h2>
-
-            <div className="space-y-6 mb-8">
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Disponibilidad 24/7:</strong> Los agentes de IA pueden operar las 24 horas del día, los 7 días
-                  de la semana, sin interrupciones, días festivos o turnos. Esto es crucial para un servicio al cliente
-                  global.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Escalabilidad ilimitada:</strong> Pueden manejar un volumen masivo de consultas
-                  simultáneamente, sin la necesidad de contratar y capacitar personal adicional. Esto es ideal para
-                  picos de demanda.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Reducción de costos:</strong> Elimina los costos asociados con salarios, beneficios,
-                  infraestructura física, capacitación y gestión de personal humano.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Consistencia y precisión:</strong> Los agentes de IA brindan respuestas uniformes y precisas,
-                  basadas en la información programada, reduciendo errores humanos y garantizando la adherencia a los
-                  procesos.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Resolución rápida:</strong> Pueden resolver consultas rutinarias de forma instantánea,
-                  mejorando los tiempos de respuesta y la satisfacción del cliente.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Análisis de datos avanzado:</strong> Las interacciones de IA generan grandes volúmenes de
-                  datos que pueden ser analizados para obtener información valiosa sobre el comportamiento del cliente,
-                  identificar tendencias y mejorar continuamente el servicio.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Personalización a escala:</strong> Aunque son virtuales, las IA pueden acceder a historiales
-                  de clientes y personalizar las interacciones para ofrecer una experiencia más relevante.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Consideraciones y desafíos:</h2>
-
-            <div className="space-y-6 mb-8">
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Complejidad de las interacciones:</strong> Si las consultas son altamente complejas, requieren
-                  empatía, negociación o resolución de problemas no estructurados, una IA podría tener dificultades. Sin
-                  embargo, la IA conversacional está avanzando rápidamente en la comprensión del lenguaje natural y la
-                  capacidad de responder de manera más humana.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Diseño de la experiencia del cliente (CX):</strong> Es fundamental diseñar cuidadosamente los
-                  flujos de conversación y las respuestas de la IA para que sean naturales, eficientes y satisfagan las
-                  necesidades del cliente. Una mala implementación puede frustrar a los usuarios.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Transferencia a un agente humano (back-up):</strong> Aunque la idea sea "solo IA", en muchos
-                  casos, especialmente en la etapa inicial o para consultas excepcionales, se podría necesitar un
-                  "bypass" o "escalada" a un agente humano para situaciones que la IA no pueda resolver. Esto no
-                  significaría que siempre haya agentes humanos, sino que estén disponibles para casos de último
-                  recurso.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Mantenimiento y optimización continua:</strong> Los sistemas de IA requieren monitoreo,
-                  entrenamiento y ajustes constantes para mejorar su rendimiento y adaptarse a nuevas preguntas o
-                  escenarios.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Percepción del cliente:</strong> Algunos clientes pueden preferir la interacción humana,
-                  especialmente para problemas sensibles o complejos. Es importante gestionar las expectativas y
-                  comunicar claramente el tipo de servicio que se ofrece.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ejemplos de cómo se usa la IA en Contact Centers hoy:
-            </h2>
-
-            <div className="space-y-6 mb-8">
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Chatbots y Voicebots:</strong> Resuelven preguntas frecuentes, proporcionan información,
-                  pueden realizar campañas salientes de cobranzas, envios masivos de mensajes ed marketing, reservan
-                  citas, y guían a los usuarios a través de procesos.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Enrutamiento inteligente de llamadas:</strong> La IA puede analizar la consulta del cliente y
-                  dirigirla al agente virtual más adecuado (o, si es necesario, al agente humano especializado).
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Análisis de sentimientos:</strong> La IA puede detectar las emociones del cliente durante la
-                  interacción (por voz o texto) y ajustar la respuesta en consecuencia.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Automatización de tareas repetitivas:</strong> Generación de resúmenes de llamadas, ingreso de
-                  datos, actualizaciones de CRM, etc.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              En resumen, la tecnología de IA está lo suficientemente avanzada como para permitir un Contact Center en
-              gran medida o incluso totalmente automatizado. La clave está en una planificación cuidadosa, la inversión
-              en la plataforma y herramientas adecuadas y una estrategia clara sobre qué tipo de interacciones serán
-              manejadas por la IA y cómo se abordarán los casos excepcionales. Para tareas repetitivas, de alto volumen
-              y predecibles, la IA es una solución muy potente y eficiente.
-            </p>
-
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-3xl p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-4">La Experiencia de GestionX</h3>
-                <p className="text-lg mb-6 opacity-90">
-                  En gestionX.ai, utilizamos la herramienta líder a nivel mundial en orquestación de experiencias,
-                  Genesys Cloud CX y contamos con un equipo de profesionales certificados por el fabricante. Somos
-                  consultores en Gestión de Experiencias y socios de negocios de la empresa líder en Iberoamerica, Izo.
-                  Con la experiencia de 10 años en la gestión de proyectos de externalización de Centro de contacto,
-                  conocemos el camino correcto para llevar a empresas, de distintos tamaños y verticales, para brindar
-                  capacidades excepcionales a sus clientes, pagando solo de acuerdo a su flujo, de forma tokenizada y
-                  sin costos de entrada o salida.
-                </p>
-                <p className="text-xl font-bold mb-6">
-                  ¿Te animas a dar el siguiente paso y diferenciarte con innovación y valor real para tus clientes?
-                </p>
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-full px-8 py-3 font-bold shadow-lg">
-                  Explorar Posibilidades Ahora
-                </Button>
-              </div>
+            <div className="text-white">
+              <h3 className="text-lg font-semibold mb-4">Contacto</h3>
+              <p className="text-gray-300 text-sm mb-2">Dirección: 123 Calle Principal, Ciudad, País</p>
+              <p className="text-gray-300 text-sm mb-2">Email: info@gestionx.com</p>
+              <p className="text-gray-300 text-sm">Teléfono: +1 555-123-4567</p>
             </div>
           </div>
-        </ParallaxContainer>
-      </article>
+          <div className="max-w-7xl mx-auto text-center mt-8">
+            <p className="text-gray-400 text-xs">© 2023 GestionX. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
