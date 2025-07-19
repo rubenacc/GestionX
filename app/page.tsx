@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { ParallaxContainer } from "@/components/parallax-container"
 import { FloatingShapes } from "@/components/floating-shapes"
 import { AnimatedSectionTitle } from "@/components/animated-section-title"
 import {
@@ -54,7 +53,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative text-white py-32 px-4 mt-16 overflow-hidden">
+      <section className="relative text-white py-32 px-4 mt-20 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -103,7 +102,7 @@ export default function LandingPage() {
         </div>
         <FloatingShapes />
 
-        <ParallaxContainer speed={0.3} className="max-w-5xl mx-auto text-center relative z-20">
+        <div className="max-w-5xl mx-auto text-center relative z-20">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-outfit mb-8 leading-tight">
             Transforma la{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
@@ -139,15 +138,15 @@ export default function LandingPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Strategic Partner Section */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
 
-        <ParallaxContainer speed={0.2} className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 rounded-full px-6 py-3 mb-8 font-semibold">
               <Shield className="w-5 h-5" />
               <span>Socio Estratégico Confiable</span>
@@ -159,16 +158,16 @@ export default function LandingPage() {
               </span>{" "}
               en experiencia del cliente
             </AnimatedSectionTitle>
-            <div className="max-w-3xl mx-auto space-y-6">
+            <div className="max-w-3xl mx-auto space-y-6 mb-12">
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Descubre por qué las PYMES y startups en Paraguay nos eligen para potenciar su crecimiento.
               </p>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold font-outfit text-gray-900 mb-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="space-y-2">
+              <h3 className="text-3xl font-bold font-outfit text-gray-900 mb-16">
                 Nuestras alianzas nos permiten entregar:
               </h3>
 
@@ -192,9 +191,9 @@ export default function LandingPage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-4 p-6 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+                    className="flex flex-col sm:flex-row items-start sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 p-4 sm:p-6 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
                   >
-                    <div className="flex-shrink-0 p-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex-shrink-0 p-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl group-hover:scale-110 transition-transform duration-300 self-center sm:self-start">
                       {item.icon}
                     </div>
                     <div>
@@ -207,8 +206,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold font-outfit text-gray-900 mb-8">¿Cómo lo hacemos?</h3>
+            <div className="space-y-2">
+              <h3 className="text-3xl font-bold font-outfit text-gray-900 mb-16">¿Cómo lo hacemos?</h3>
 
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-3xl border border-blue-100">
                 <div className="space-y-8">
@@ -233,44 +232,44 @@ export default function LandingPage() {
               </div>
 
               <div className="text-center">
-                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-8 py-4 font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-4 sm:px-8 py-3 sm:py-4 font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                   Conoce más sobre experiencias excepcionales
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
               </div>
             </div>
           </div>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Customer Experience Services Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+      <section className="py-16 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
 
-        <ParallaxContainer speed={0.2} className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-3 mb-8 font-semibold">
-              <Target className="w-5 h-5" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 font-semibold text-sm sm:text-base">
+              <Target className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>Servicios Especializados</span>
             </div>
-            <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900 leading-tight">
+            <AnimatedSectionTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-outfit mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
               Nuestros servicios de{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 experiencia del cliente
               </span>
             </AnimatedSectionTitle>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+            <div className="max-w-4xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                 Soluciones integrales para fidelizar a tus clientes y potenciar tu negocio.
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 sm:px-0">
             {[
               {
-                icon: <HeadphonesIcon className="w-12 h-12 text-white" />,
+                icon: <HeadphonesIcon className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white" />,
                 title: "Externalización de Centro de Contacto",
                 color: "from-blue-500 to-cyan-500",
                 bgColor: "from-blue-50 to-cyan-50",
@@ -284,7 +283,7 @@ export default function LandingPage() {
                 ],
               },
               {
-                icon: <Bot className="w-12 h-12 text-white" />,
+                icon: <Bot className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white" />,
                 title: "Autoservicio Impulsado por IA",
                 color: "from-purple-500 to-pink-500",
                 bgColor: "from-purple-50 to-pink-50",
@@ -302,24 +301,30 @@ export default function LandingPage() {
                 key={index}
                 className={`group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br ${service.bgColor} overflow-hidden rounded-3xl`}
               >
-                <CardContent className="p-6 sm:p-10">
-                  <div className="flex items-start space-x-6">
-                    <div
-                      className={`flex-shrink-0 p-3 sm:p-4 bg-gradient-to-br ${service.color} rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      {service.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-bold font-outfit mb-6 text-gray-900">{service.title}</h3>
-                      <p className="text-gray-700 leading-relaxed text-lg mb-8">{service.description}</p>
-                      <div className="space-y-4">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                            <span className="text-gray-700 font-medium">{feature}</span>
-                          </div>
-                        ))}
+                <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
+                  <div className="flex flex-col space-y-4 sm:space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6">
+                      <div
+                        className={`flex-shrink-0 p-2 sm:p-3 md:p-4 bg-gradient-to-br ${service.color} rounded-2xl md:rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 self-center sm:self-start`}
+                      >
+                        {service.icon}
                       </div>
+                      <div className="flex-1 text-center sm:text-left">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-outfit mb-4 sm:mb-6 text-gray-900">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6 sm:mb-8">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="space-y-3 sm:space-y-4">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start space-x-3">
+                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700 font-medium text-sm sm:text-base">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </CardContent>
@@ -327,25 +332,27 @@ export default function LandingPage() {
             ))}
           </div>
 
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Listo para diferenciarte gestionando tus interacciones como las mejores empresas?</h3>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+          <div className="text-center mt-8 sm:mt-12 px-4 sm:px-0">
+            <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                ¿Listo para diferenciarte gestionando tus interacciones como las mejores empresas?
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                 Nuestro equipo de expertos está preparado para diseñar la solución perfecta para tu empresa.
               </p>
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-8 py-4 font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Conocé más... 
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-6 sm:px-8 py-3 sm:py-4 font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                Conocé más...
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Button>
             </div>
           </div>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <ParallaxContainer speed={0.1} className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-gray-900">
               ¿Qué más podemos{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -354,12 +361,12 @@ export default function LandingPage() {
             </AnimatedSectionTitle>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8">
             <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden rounded-3xl">
               <CardContent className="p-10">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-10 h-10 text-white" />
+                <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                  <div className="flex-shrink-0 p-2 md:p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl md:rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 self-center md:self-start">
+                    <Users className="w-6 h-6 md:w-10 md:h-10 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold font-outfit mb-6 text-gray-900">
@@ -399,9 +406,9 @@ export default function LandingPage() {
 
             <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden rounded-3xl">
               <CardContent className="p-10">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-10 h-10 text-white" />
+                <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                  <div className="flex-shrink-0 p-2 md:p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl md:rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 self-center md:self-start">
+                    <Target className="w-6 h-6 md:w-10 md:h-10 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold font-outfit mb-6 text-gray-900">
@@ -419,13 +426,13 @@ export default function LandingPage() {
               </CardContent>
             </Card>
           </div>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Consulting Services */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <ParallaxContainer speed={0.15} className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-3 mb-8 font-semibold">
               <Sparkles className="w-5 h-5" />
               <span>Consultoría de Vanguardia</span>
@@ -436,7 +443,7 @@ export default function LandingPage() {
                 vanguardia
               </span>
             </AnimatedSectionTitle>
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 mb-12">
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Somos Business Partners exclusivos de{" "}
                 <a
@@ -519,11 +526,11 @@ export default function LandingPage() {
                 className={`group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br ${service.bgColor} overflow-hidden rounded-3xl`}
               >
                 <CardContent className="p-10">
-                  <div className="flex items-start space-x-6">
+                  <div className={`flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6`}>
                     <div
-                      className={`flex-shrink-0 p-4 bg-gradient-to-br ${service.color} rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                      className={`flex-shrink-0 p-2 md:p-4 bg-gradient-to-br ${service.color} rounded-2xl md:rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 self-center md:self-start`}
                     >
-                      <BarChart3 className="w-10 h-10 text-white" />
+                      <BarChart3 className="w-6 h-6 md:w-10 md:h-10 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold font-outfit mb-6 text-gray-900">{service.title}</h3>
@@ -542,14 +549,14 @@ export default function LandingPage() {
               </Card>
             ))}
           </div>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-600 text-white relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 pattern-grid opacity-20"></div>
 
-        <ParallaxContainer speed={0.2} className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 font-semibold">
               <Sparkles className="w-5 h-5 text-yellow-300" />
@@ -558,9 +565,9 @@ export default function LandingPage() {
             <AnimatedSectionTitle className="text-3xl sm:text-4xl md:text-6xl font-bold font-outfit mb-8 text-white">
               Inicia tu transformación en <span className="text-yellow-300">experiencia del cliente.</span>
             </AnimatedSectionTitle>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Completa el formulario y uno de nuestros especialistas en XM se pondrá en contacto. Agenda una consultoría
-              y sin compromiso.
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-12">
+              Completa el formulario y uno de nuestros nuestros especialistas en XM se pondrá en contacto. Agenda una
+              consultoría y sin compromiso.
             </p>
           </div>
 
@@ -609,7 +616,7 @@ export default function LandingPage() {
               </form>
             </CardContent>
           </Card>
-        </ParallaxContainer>
+        </div>
       </section>
 
       {/* Footer */}
