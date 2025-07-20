@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -21,9 +23,13 @@ import {
   HeadphonesIcon,
   Bot,
   ExternalLink,
+  Menu,
+  X,
 } from "lucide-react"
+import { useState } from "react"
 
 export default function LandingPage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -32,6 +38,8 @@ export default function LandingPage() {
           <div className="flex items-center">
             <img src="/images/gestionx-new-logo.png" alt="GestionX" className="h-10 w-auto" />
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Inicio
@@ -49,7 +57,59 @@ export default function LandingPage() {
               Agenda una cita
             </Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-gray-600" /> : <Menu className="w-6 h-6 text-gray-600" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg">
+            <nav className="px-4 py-4 space-y-4">
+              <a
+                href="#"
+                className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Inicio
+              </a>
+              <a
+                href="#"
+                className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Servicios
+              </a>
+              <a
+                href="/blog"
+                className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </a>
+              <a
+                href="#"
+                className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contacto
+              </a>
+              <div className="pt-2">
+                <Button
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Agenda una cita
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
