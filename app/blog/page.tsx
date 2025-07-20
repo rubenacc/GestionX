@@ -14,7 +14,8 @@ export default function BlogPage() {
       date: "18 Ene 2025",
       readTime: "8 min",
       category: "Experiencia del Cliente",
-      image: "/images/blog/cerrando-brecha-cx.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-20%20at%2019.56.42-vcJx7UTN49tope5lUSDneATuuJg9hd.jpeg",
       color: "from-blue-50 to-indigo-50",
       borderColor: "border-blue-200",
       link: "/blog/cerrando-brecha-cx",
@@ -27,7 +28,8 @@ export default function BlogPage() {
       date: "15 Ene 2025",
       readTime: "10 min",
       category: "Inteligencia Artificial",
-      image: "/images/blog/chatbot-vs-agente-virtual.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-20%20at%2019.53.20-fDdEvE1MG9GRNo2JBKje5C4LjTCbDP.jpeg",
       color: "from-purple-50 to-pink-50",
       borderColor: "border-purple-200",
       link: "/blog/chatbot-vs-agente-virtual",
@@ -40,7 +42,8 @@ export default function BlogPage() {
       date: "12 Ene 2025",
       readTime: "12 min",
       category: "Estrategia Operacional",
-      image: "/images/blog/ecuacion-costo-calidad-servicio.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-20%20at%2019.55.07-z7IjevEzRFC7DEykviaG5jIhu2aaIw.jpeg",
       color: "from-green-50 to-teal-50",
       borderColor: "border-green-200",
       link: "/blog/ecuacion-costo-calidad-servicio",
@@ -53,7 +56,8 @@ export default function BlogPage() {
       date: "10 Ene 2025",
       readTime: "9 min",
       category: "Transformación Digital",
-      image: "/images/blog/contact-center-sin-agentes.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-20%20at%2019.55.36-s7mcPIkDVutmvjpKEZQczczeT3O9L2.jpeg",
       color: "from-orange-50 to-red-50",
       borderColor: "border-orange-200",
       link: "/blog/contact-center-sin-agentes",
